@@ -44,6 +44,26 @@ public class Mario {
         this.setAge(age);
     }
 
+    public void reduceStamina(){
+        if(getStamina() -10 <= 9 ){
+            setStamina(0);
+        }else{
+            setStamina(getStamina() - 10);
+        }
+    }
+
+    public void gainStamina(){
+        if((getStamina() + 5) > 95 ){
+            setStamina(100);
+        }else{
+            setStamina(getStamina() + 5);
+        }
+    }
+
+    public void growthMushroomEffect(){
+        setHeight(getHeight() * 2);
+    }
+
     public void pular(){
         System.out.println("mario pulou!");
     }
