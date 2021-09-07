@@ -4,36 +4,46 @@ public class Mario {
     private float height;
     private int stamina;
     private int age;
+    private int collectedCoins;
+    private int lifes;
 
-    public String getName() {
-        return name;
+    private int getLifes() {
+        return lifes;
     }
 
-    public void setName(String name) {
+    private void setLifes(int lifes) {
+        this.lifes = lifes;
+    }
+
+    private int getCollectedCoins() {
+        return collectedCoins;
+    }
+
+    private void setCollectedCoins(int collectedCoins) {
+        this.collectedCoins = collectedCoins;
+    }
+
+    private void setName(String name) {
         this.name = name;
     }
 
-    public float getHeight() {
+    private float getHeight() {
         return height;
     }
 
-    public void setHeight(float height) {
+    private void setHeight(float height) {
         this.height = height;
     }
 
-    public int getStamina() {
+    private int getStamina() {
         return stamina;
     }
 
-    public void setStamina(int stamina) {
+    private void setStamina(int stamina) {
         this.stamina = stamina;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
+    private void setAge(int age) {
         this.age = age;
     }
 
@@ -42,6 +52,8 @@ public class Mario {
         this.setHeight(height);
         this.setStamina(stamina);
         this.setAge(age);
+        this.setCollectedCoins(0);
+        this.setLifes(1);
     }
 
     public void reduceStamina(){
@@ -64,8 +76,29 @@ public class Mario {
         setHeight(getHeight() * 2);
     }
 
-    public void pular(){
-        System.out.println("mario pulou!");
+    public void resetStaminaStatus(){
+        setStamina(100);
+    }
+
+    public void die(){
+        this.setStamina(0);
+
+        if(getLifes() - 1 <= 0){
+            this.setLifes(0);
+        }else{
+            this.setLifes(getLifes() - 1);
+        }
+
+        if(getLifes() >= 0){
+            this.resetStaminaStatus();
+        }
+
+    }
+    public void collectCoin(){
+        this.setCollectedCoins(getCollectedCoins() + 1);
+        if((getCollectedCoins() % 10) == 0){
+            this.setLifes(getLifes() + 1);
+        }
     }
 
 }
