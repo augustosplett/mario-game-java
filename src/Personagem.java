@@ -108,4 +108,12 @@ public class Personagem {
             System.out.println("Pulando uma altura de " + + this.getHeight() * 2);
     }
 
+    public void currentStatus(){
+        System.out.println("Nome='" + this.name +
+                ", Altura=" + this.getHeight() +
+                ", Idade=" + this.age +
+                ", Estamina=" + getStamina() +
+                ", Quantida de Moedas=" + getCollectedCoins() +
+                ", Quantida de Vidas=" + getLifes());
+    }
 }
