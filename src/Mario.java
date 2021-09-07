@@ -3,6 +3,12 @@ public class Mario {
     private float altura;
     private String nome;
 
+    public Mario(String mario, float altura) {
+        this.setNome("mario");
+        this.setAltura(altura);
+
+    }
+
     public float getAltura() {
         return altura;
     }
@@ -19,9 +25,8 @@ public class Mario {
         this.nome = nome;
     }
 
-    public void constructor(String nome, float altura){
-            this.setAltura(altura);
-            this.setNome(nome);
+    public void pular(){
+        System.out.println("mario pulou!");
     }
 
 }
