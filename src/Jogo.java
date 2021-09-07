@@ -1,6 +1,6 @@
 public class Jogo {
     public static void main(String[] args) {
-        Mario mario = new Mario("mario", 1.5f);
+        Mario mario = new Mario("Mario Bros", 1.5f, 100, 40 );
         mario.pular();
 
     }

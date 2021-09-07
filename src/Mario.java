@@ -1,28 +1,47 @@
 public class Mario {
 
-    private float altura;
-    private String nome;
+    private String name;
+    private float height;
+    private int stamina;
+    private int age;
 
-    public Mario(String mario, float altura) {
-        this.setNome("mario");
-        this.setAltura(altura);
-
+    public String getName() {
+        return name;
     }
 
-    public float getAltura() {
-        return altura;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setAltura(float altura) {
-        this.altura = altura;
+    public float getHeight() {
+        return height;
     }
 
-    public String getNome() {
-        return nome;
+    public void setHeight(float height) {
+        this.height = height;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public int getStamina() {
+        return stamina;
+    }
+
+    public void setStamina(int stamina) {
+        this.stamina = stamina;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Mario(String name, float height, int stamina, int age) {
+        this.setName(name);
+        this.setHeight(height);
+        this.setStamina(stamina);
+        this.setAge(age);
     }
 
     public void pular(){
