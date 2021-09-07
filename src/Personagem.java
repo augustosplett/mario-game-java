@@ -1,4 +1,4 @@
-public class Mario {
+public class Personagem {
 
     private String name;
     private float height;
@@ -47,7 +47,7 @@ public class Mario {
         this.age = age;
     }
 
-    public Mario(String name, float height, int stamina, int age) {
+    public Personagem(String name, float height, int stamina, int age) {
         this.setName(name);
         this.setHeight(height);
         this.setStamina(stamina);
@@ -77,7 +77,7 @@ public class Mario {
     }
 
     public void resetStaminaStatus(){
-        setStamina(100);
+        this.setStamina(100);
     }
 
     public void die(){
@@ -99,6 +99,13 @@ public class Mario {
         if((getCollectedCoins() % 10) == 0){
             this.setLifes(getLifes() + 1);
         }
+    }
+
+    public void jump(){
+        if (this.name.equals("Mario"))
+            System.out.println("Pulando uma altura de " + this.getHeight() * 0.5);
+        if (this.name.equals("Luigi"))
+            System.out.println("Pulando uma altura de " + + this.getHeight() * 2);
     }
 
 }
